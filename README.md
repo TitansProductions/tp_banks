@@ -1,7 +1,8 @@
 # Development API
 
-`local BankAPI = exports.tp_banks:getAPI()`
+## Exports
 
+`local BankAPI = exports.tp_banks:getAPI()`
 
 | Export                                                                    | Description                                                                                                                                                                                                                | Returned Type |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
@@ -14,3 +15,15 @@
 | `BankAPI.createTransactionHistoryRecord(iban, reason, account, amount)`   | Creates (Generates) a transaction history record.                                                                                                                                                                          | N/A           |
 | `BankAPI.depositGovernmentBanksSharedAmount(amount)`                      | Deposits a shared amount to all Government Accounts (That means, if amount is 50, it will shared (/) based on the available bank accounts, for example, if 5 are the government bank accounts, it will be shared / 5.      | N/A           |
 | `BankAPI.getBankAccounts()`                                               | Returns all the available Bank Accounts.                                                                                                                                                                                   | Table         |
+
+
+## Parameters Explanation
+
+| Parameter                                                                          | Description                                                                                                                                  |
+|------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------|
+| `iban`                                                                             | Requires the IBAN account on a string form (text).                                                                                           | 
+| `source`                                                                           | Requires an online player id source target                                                                                                   | 
+| `account`                                                                          | The available account types are "CASH" and "GOLD"                                                                                            | 
+| `transactionType`                                                                  | The available transaction types are "DEPOSIT" and "WITHDRAW"                                                                                 | 
+| `reason`                                                                           | It requires a reason for a bill or a transaction history record, the reason length must be very short such as (DEPOSIT, TAX, POLICE, SALOON) | 
+| `issuer`                                                                           | It requires an issuer for a bill, the issuer length must be very short such as (POLICE, SALOON, GOVERNMENT)                                  | 
