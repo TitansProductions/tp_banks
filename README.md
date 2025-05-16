@@ -2,7 +2,12 @@
 
 ## Exports
 
-`local BankAPI = exports.tp_banks:getAPI()`
+**Getter**
+The specified export below is used on the `server` to use the API properly and faster.
+
+```lua
+local BankAPI = exports.tp_banks:getAPI()
+```
 
 | Export                                                                    | Description                                                                                                                                                                                                                | Returned Type |
 |---------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------|
